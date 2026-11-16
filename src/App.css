@@ -1,0 +1,240 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Orbitron:wght@400;500;600;700;800&display=swap');
+
+:root {
+  font-family: 'Rajdhani', sans-serif;
+  color: #f5efff;
+  background: #080510;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  color-scheme: dark;
+  --accent: #a855f7;
+  --accent-light: #d8a5ff;
+  --bg: #080510;
+  --panel: #171023;
+  --border: #38234e;
+  --muted: #c2b4d2;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  margin: 0;
+  min-height: 100%;
+  width: 100%;
+}
+
+body {
+  background:
+    radial-gradient(ellipse at top, #28103d 0%, #10091c 42%, #080510 80%);
+  color: #f5efff;
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 17px;
+}
+
+button, input, select, textarea {
+  font: inherit;
+}
+
+h1, h2, h3, h4, p, span, label, small, strong {
+  color: inherit;
+}
+
+h1, h2, h3 {
+  font-family: 'Orbitron', sans-serif;
+  color: #ffffff;
+  line-height: 1.3;
+}
+
+p, label, span, small {
+  color: #e0d5ed;
+}
+
+.muted, .subtitle, .form-subtitle,
+.eyebrow, .footer, .description {
+  color: #c2b4d2 !important;
+}
+
+input, select, textarea {
+  width: 100%;
+  min-height: 48px;
+  padding: 12px 15px;
+  color: #ffffff !important;
+  background: #0c0713 !important;
+  border: 1px solid #51366a !important;
+  border-radius: 12px;
+  outline: none;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #a99bb8 !important;
+  opacity: 1;
+}
+
+input:focus, select:focus, textarea:focus {
+  border-color: #bd75ff !important;
+  box-shadow: 0 0 0 3px #a855f733;
+}
+
+button {
+  color: #ffffff;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: 0.2s ease;
+}
+
+button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.primary, .create-submit {
+  background: linear-gradient(135deg, #7e22ce, #b04cff) !important;
+  color: #ffffff !important;
+  border: 1px solid #c084fc !important;
+  padding: 13px 22px;
+  font-weight: 700;
+  box-shadow: 0 0 18px #a855f744;
+}
+
+.primary:hover, .create-submit:hover {
+  box-shadow: 0 0 25px #a855f788;
+  transform: translateY(-1px);
+}
+
+button:not(.primary):not(.create-submit) {
+  background: #21152f;
+  color: #f5efff;
+  border: 1px solid #51366a;
+  padding: 10px 15px;
+}
+
+button:not(.primary):not(.create-submit):hover {
+  border-color: #bd75ff;
+  background: #30203f;
+}
+
+.panel, .card, .tournament-card, .auth-card {
+  background: linear-gradient(145deg, #1d132b, #100b19) !important;
+  border: 1px solid #39234d;
+  border-radius: 18px;
+  color: #f5efff;
+  box-shadow: 0 10px 30px #00000044;
+}
+
+.cards, .form-grid {
+  display: grid;
+  gap: 16px;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-field span {
+  color: #e6d7f5;
+  font-weight: 600;
+}
+
+nav {
+  background: #100a19;
+  border-top: 1px solid #39234d;
+}
+
+nav button {
+  color: #d8c5eb !important;
+}
+
+nav button.active {
+  color: #d8a5ff !important;
+  border-color: #a855f7 !important;
+  background: #321849 !important;
+}
+
+a {
+  color: #d8a5ff;
+}
+
+hr {
+  border-color: #39234d;
+}
+
+::selection {
+  background: #a855f7;
+  color: #ffffff;
+}
+
+@media (max-width: 600px) {
+  body {
+    font-size: 16px;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  button {
+    max-width: 100%;
+  }
+
+  .panel, .card, .auth-card {
+    padding: 18px;
+  }
+}
+
+
+
+/* LOGIN PAGE S2K GLOW */
+.brand-name {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 42px;
+  font-weight: 800;
+  letter-spacing: 8px;
+  color: #ffffff !important;
+  text-shadow:
+    0 0 5px #ffffff,
+    0 0 12px #a855f7,
+    0 0 25px #a855f7,
+    0 0 45px #7e22ce;
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.brand-name span {
+  color: #d8a5ff !important;
+}
+
+/* DASHBOARD S2K GLOW */
+.brand {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 28px;
+  font-weight: 900;
+  letter-spacing: 4px;
+  color: #ffffff !important;
+  text-shadow:
+    0 0 5px #ffffff,
+    0 0 12px #a855f7,
+    0 0 25px #a855f7,
+    0 0 40px #7e22ce;
+}
+
+.brand span {
+  color: #d8a5ff !important;
+}
+/* Soft Premium Neon Glow */
+.brand,
+.brand-name {
+  text-shadow:
+    0 0 2px #ffffff,
+    0 0 6px #a855f7,
+    0 0 12px #7e22ce;
+}
